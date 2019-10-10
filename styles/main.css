@@ -1,0 +1,39 @@
+.background-cover {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000 10%, #0000006b, #000000);
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/background_home.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -100px;
+}
+
+.home-title {
+    position: absolute;
+    z-index: 1;
+    top: 200;
+    left: 100;
+}
+
+.home-title span {
+    font-family: merienda;
+    font-size: 4rem;
+    color: white;
+}
+
+.home-title p {
+    position: absolute;
+    bottom: 20;
+    left: 210;
+    font-size: 2rem;
+    color: white;
+}
+
+.jumbotron {
+    z-index: 5;
+}
