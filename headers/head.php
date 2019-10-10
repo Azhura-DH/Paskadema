@@ -15,10 +15,10 @@
                 <a class="nav-link" href="news.php">News</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="./about.php" data-toggle="dropdown">About</a>
+                <a class="nav-link dropdown-toggle" href="profile.php" data-toggle="dropdown">About</a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Sejarah</a>
+                    <a class="dropdown-item" href="profile.php">Profile</a>
+                    <a class="dropdown-item" href="sejarah.php">Sejarah</a>
                     <a class="dropdown-item" href="#">Anggota</a>
                 </div>
             </li>
