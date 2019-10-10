@@ -1,6 +1,6 @@
 <body>
     <?php
-        include '../headers/head.php'
+        include 'headers/head.php'
     ?>
 
     <div class="background-home">
@@ -8,7 +8,7 @@
             <div class="background-cover"></div>
         </div>
         <div class="home-title">
-            <img src="../images/smkn-8-malang.png" alt="logo">
+            <img src="./images/smkn-8-malang.png" alt="logo">
             <span>Paskadema Senanjaya</span>
             <p>Pasukan Pengibar Bendera SMKN 8 Malang</p>
         </div>
