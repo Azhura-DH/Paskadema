@@ -3,14 +3,14 @@
         include 'headers/head.php'
     ?>
 
-    <div class="background-home">
-        <div class="background-image">
-            <div class="background-cover"></div>
-        </div>
+    <div class="background-landing">
+        <div class="img-female"></div>
         <div class="home-title">
-            <img src="./images/smkn-8-malang.png" alt="logo">
-            <span>Paskadema Senanjaya</span>
-            <p>Pasukan Pengibar Bendera SMKN 8 Malang</p>
+            <div class="logo"></div>
+            <div class="landing-title">
+                <span>Paskadema Senanjaya</span>
+                <p>Pasukan Pengibar Bendera SMKN 8 Malang</p>
+            </div>
         </div>
     </div>
     <div class="jumbotron">

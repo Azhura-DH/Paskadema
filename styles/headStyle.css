@@ -6,10 +6,6 @@
     padding: .5rem 1rem !important;
 }
 
-.nav-link:hover {
-    color: white !important;
-}
-
 .nav-item:hover {
     border-bottom: 3px solid red;
 }
@@ -20,7 +16,7 @@
 }
 
 .bg-primary-custom {
-    background-color: #000;
+    background-color: transparent;
 }
 
 .navbar .nav-item:not(:last-child) {
@@ -34,58 +30,3 @@
 .show.dropdown .dropdown-toggle::after {
     transform: translateY(3px);
 }
-
-/*----------------------- Paskadema -----------------------*/
-/* 
-body {
-    margin: 0;
-}
-
-header {
-    display: flex;
-    font-size: 16px;
-    background-color: #9e0000;
-}
-
-.logo a {
-    display: flex;
-    margin: auto;
-    font-size: 1.2rem;
-}
-
-.logo a img {
-    margin: 5px 20px;
-    height: 30px;
-    width: 30px;
-}
-
-.logo a span {
-    margin: auto;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
-.nav {
-    display: flex;
-}
-
-.nav .nav-page {
-    display: flex;
-    margin: auto;
-    position: absolute;
-    right: 0;
-}
-
-.nav-page a {
-    margin: auto;
-    padding: 11px 20px;
-    color: white;
-}
-
-.nav-page a:hover {
-    color: yellow;
-    background-color: red;
-} */

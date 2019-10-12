@@ -2,40 +2,38 @@
     outline: none;
 }
 
-.background-cover {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#000 10%, #0000006b, #000000);
-}
-
-.background-image {
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/background_home.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 0 -100px;
+.img-female {
+    width: 420px;
+    height: 413px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/female-paski.png);
+    background-size: contain;
 }
 
 .home-title {
-    position: absolute;
-    z-index: 1;
-    top: 200;
-    left: 100;
+    display: flex;
+    margin-top: 200px;
+    margin-left: 100px;
+    z-index: 99;
 }
 
-.home-title span {
+.home-title .logo {
+    width: 200px;
+    height: 217px;
+    background-image: url(../images/smkn-8-malang.png);
+
+}
+
+.landing-title span {
+    z-index: 99;
     font-family: merienda;
     font-size: 4rem;
-    color: white;
 }
 
-.home-title p {
-    position: absolute;
-    bottom: 20;
-    left: 210;
+.landing-title p {
     font-size: 2rem;
-    color: white;
 }
 
 .jumbotron {
