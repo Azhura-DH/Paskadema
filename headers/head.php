@@ -19,7 +19,7 @@
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="profile.php">Profile</a>
                     <a class="dropdown-item" href="sejarah.php">Sejarah</a>
-                    <a class="dropdown-item" href="#">Anggota</a>
+                    <a class="dropdown-item" href="anggota.php">Anggota</a>
                 </div>
             </li>
         </ul>
