@@ -2,40 +2,46 @@
     outline: none;
 }
 
-.img-female {
-    width: 420px;
-    height: 413px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-image: url(../images/female-paski.png);
-    background-size: contain;
+.landing {
+    background-color: #fff !important;
 }
 
-.home-title {
-    display: flex;
-    margin-top: 200px;
-    margin-left: 100px;
-    z-index: 99;
-}
-
-.home-title .logo {
+.img-logo {
+    margin: auto;
     width: 200px;
-    height: 217px;
-    background-image: url(../images/smkn-8-malang.png);
-
+    height: 200px;
+    background-image: url(../images/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
 }
 
-.landing-title span {
-    z-index: 99;
-    font-family: merienda;
-    font-size: 4rem;
+.back-red {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    background-image: url(../images/svg/blob-shape.svg);
 }
 
-.landing-title p {
-    font-size: 2rem;
-}
+@media (max-width:576px) {
+    .img-logo {
+        margin: auto !important;
+        width: 100px;
+        height: 100px;
+    }
 
-.jumbotron {
-    z-index: 5;
+    .landing-title {
+        margin: 0 10 !important;
+        color: #000 !important;
+    }
+
+    .landing-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .landing p {
+        font-size: 0.8rem;
+    }
 }

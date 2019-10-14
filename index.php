@@ -3,19 +3,18 @@
         include 'headers/head.php'
     ?>
 
-    <div class="background-landing">
-        <div class="img-female"></div>
-        <div class="home-title">
-            <div class="logo"></div>
-            <div class="landing-title">
-                <span>Paskadema Senanjaya</span>
+    <div class="back-red"></div>
+    <div class="jumbotron landing">
+        <div class="row mt-5 pt-5">
+            <div class="col-3 ml-3 mr-3">
+                <div class="img-logo"></div>
+            </div>
+            <div class="col-6 m-5 text-light landing-title">
+                <h1>Paskadema Senanjaya</h1>
                 <p>Pasukan Pengibar Bendera SMKN 8 Malang</p>
             </div>
+            </div>
         </div>
-    </div>
-    <div class="jumbotron">
-        <h1>Example</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, consequatur. Pariatur sed ut minima magnam velit veniam ipsum quisquam? Labore accusantium eius itaque quidem tempora veritatis amet nesciunt. Deleniti, quasi?</p>
     </div>
 </body>
 </html>
