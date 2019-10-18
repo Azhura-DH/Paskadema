@@ -25,6 +25,13 @@
     background-image: url(../images/svg/blob-shape.svg);
 }
 
+.bullet {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e00000;
+}
+
 @media (max-width:576px) {
     .img-logo {
         margin: auto !important;
