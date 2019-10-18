@@ -9,8 +9,8 @@
         <title>LOGIN ADMIN</title>
         <!-- <link rel="icon" href="img/favicon.ico">
         <link href="css/style.css" rel="stylesheet" /> -->
-        <link rel="stylesheet" href="../styles/bootstrap4.css">
-        <script src="../script/bootstrap4.js"></script>
+        <link rel="stylesheet" href="../../styles/bootstrap4.css">
+        <script src="../../script/bootstrap4.js"></script>
     </head>
     <body>
         <div class="container">

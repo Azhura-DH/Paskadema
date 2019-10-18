@@ -3,7 +3,7 @@
         <li class="nav-item active">
         </li>
     </ul>
-    <a class="navbar-brand" href="dashboard.php">Paskadema</a>
+    <a class="navbar-brand" href="../index.php">Paskadema</a>
 </nav> 
 
 <div class="page-wrapper toggled chiller-theme">
@@ -31,34 +31,34 @@
                         <span>Menu</span>
                     </li>
                     <li>
-                        <a href="dashboard.php">
+                        <a href="index.php">
                             <i class="fas fa-tachometer-alt"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="siswa.php">
-                            <i class="fas fa-user"></i>
-                            <span>Siswa</span>
+                        <a href="news.php">
+                            <i class="fas">&#xf1ea;</i>
+                            <span>News</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="kantin.php">
-                            <i class="fas fa-store"></i>
-                            <span>Kantin</span>
+                        <a href="event.php">
+                            <i class="material-icons">event</i>
+                            <span>Event</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="donasi.php">
-                            <i class="fas fa-hand-holding-usd"></i>
-                            <span>Donasi</span>
+                        <a href="angkatan.php">
+                            <i class="fas">&#xf0c0;</i>
+                            <span>Angkatan</span>
                         </a>
                     </li>
 
-                    <li>
+                    <!-- <li>
                         <a href="spp.php">
                             <i class="fas fa-book"></i>
                             <span>SPP</span>
@@ -77,7 +77,7 @@
                             <i class="fas fa-journal-whills"></i>
                             <span>Jurnal Admin</span>
                         </a>
-                    </li>
+                    </li> -->
                      
                 </ul>
             </div>
@@ -85,10 +85,10 @@
         </div>
         <!-- sidebar-content  -->
         <div class="sidebar-footer">
-            <a href="pengaturan.php">
+            <a href="setting.php">
                 <i class="fa fa-cog"></i>
             </a>
-            <a href="../actions/logout.php">
+            <a href="action/logout.php">
                 <i class="fa fa-power-off"></i>
             </a>
         </div>
