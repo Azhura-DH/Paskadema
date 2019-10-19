@@ -1,4 +1,4 @@
-<nav class="navbar hide-small fixed-top navbar-expand-sm bg-primary navbar-dark navbar-fixed">
+<nav class="navbar hide-small fixed-top navbar-expand-sm bg-paski navbar-dark navbar-fixed">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
         </li>
@@ -7,7 +7,7 @@
 </nav> 
 
 <div class="page-wrapper toggled chiller-theme">
-    <a id="show-sidebar" class="btn btn-sm text-white" href="#">
+    <a id="show-sidebar" class="btn btn-sm bg-transparent text-white" href="#">
         <i class="fas fa-bars"></i>
     </a>
     <nav id="sidebar" class="sidebar-wrapper">
@@ -30,28 +30,28 @@
                     <li class="header-menu">
                         <span>Menu</span>
                     </li>
-                    <li>
+                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "index.php" ? "sidebar-active" : "" ?>">
                         <a href="index.php">
                             <i class="fas fa-tachometer-alt"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
 
-                    <li>
+                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "news.php" ? "sidebar-active" : "" ?>">
                         <a href="news.php">
                             <i class="fas">&#xf1ea;</i>
                             <span>News</span>
                         </a>
                     </li>
 
-                    <li>
+                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "event.php" ? "sidebar-active" : "" ?>">
                         <a href="event.php">
                             <i class="material-icons">event</i>
                             <span>Event</span>
                         </a>
                     </li>
 
-                    <li>
+                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "anggota.php" ? "sidebar-active" : "" ?>">
                         <a href="anggota.php">
                             <i class="fas">&#xf0c0;</i>
                             <span>Anggota</span>

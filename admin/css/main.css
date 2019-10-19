@@ -25,9 +25,9 @@
 /*------------- Paski Colors -------------*/
 
 .bg-paski {
-    background-color: #bb1313;
+    background-color: #8b0000 !important;
 }
 
 .bg-paski:hover {
-    background-color: #ff0000;
+    background-color: #ff0000 !important;
 }

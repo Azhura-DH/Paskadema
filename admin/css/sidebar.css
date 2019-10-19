@@ -107,7 +107,7 @@ body {
   width: 35px;
   transition-delay: 0.3s;
   z-index: 1031;
-  background-color: #2C3E50;
+  background-color: #220c0c;
 }
 
 .page-wrapper.toggled #show-sidebar {
@@ -327,6 +327,14 @@ body {
   right: 17px;
 }
 
+.menu-item-paski:hover {
+  background-color: darkred;
+}
+
+.sidebar-active {
+  background-color: darkred;
+}
+
 /*--------------------------side-footer------------------------------*/
 
 .sidebar-footer {
@@ -436,7 +444,7 @@ body {
 /*-----------------------------chiller-theme-------------------------------------------------*/
 
 .chiller-theme .sidebar-wrapper {
-  background: #2c3e50;
+  background: #220c0c;
   -webkit-box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.75);
