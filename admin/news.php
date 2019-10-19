@@ -15,7 +15,116 @@
 ?>
 
 <div class="container">
-    <p>news</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Tools</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                if(isset($_GET['act']) AND $_GET['act']=='hapus') {
+                    $hapus = mysqli_query($mysqli,"DELETE FROM news
+                                        WHERE id_news = '$_GET[id]'");
+                    $tes = $_GET['id'];
+                    if($hapus) {
+                        echo "<script>alert('Data berhasil dihapus!')</script>";
+                    } else {
+                        echo "<script>alert('Data gagal dihapus!')</script>";
+                    }
+                }
+
+                $query = mysqli_query($mysqli,"SELECT * FROM news");
+                
+                if(mysqli_num_rows($query) > 0) {
+                    while($data = mysqli_fetch_array($query)) {?>
+                        <tr>
+                            <td><?=$data["id_news"]?></td>
+                            <td><?=$data["title_news"]?></td>
+                            <td><?=$data["description"]?></td>
+                            <td><?=$data["date_news"]?></td>
+                            <td>
+                                <a href='?act=edit&id=<?=$data["id_news"]?>'>
+                                    <button type='button' class='btn btn-warning'>Edit</button>
+                                </a>
+                                <a href='?act=hapus&id=<?=$data["id_news"]?>' OnClick="return confirm('Anda yakin menghapus data?')">
+                                    <button type='button' class='btn btn-danger'>Hapus</button>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                } else {
+                    echo "
+                        <tr>
+                            <td>Tidak ada data.</td>
+                        </tr>
+                    ";
+                }
+            ?>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="modalAddNews" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Tambah Berita Baru</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="<?=htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post" id="inputNews">
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="titleNews">Title</label>
+                        <input type="text" name="title_news" id="titleNews" class="form-control" placeholder="Type the title here..." required>
+                    </div>
+                    <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="inputDescription">Description</label>
+                        <textarea id="inputDescription" class="form-control" rows="4" cols="50" name="description" form="inputNews" placeholder="Enter text here..." required></textarea>
+                    </div>
+                    <!-- <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="inputDate">Date</label>
+                        <input id="inputDate" type="date" id="orangeForm-pass" class="form-control validate" required>
+                    </div> -->
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <input type="submit" name="add_news" value="Submit" class="btn btn-primary btn-block rounded-pill">
+                </div>
+            </form>
+            <?php include 'action/addNews.php' ?>
+        </div>
+    </div>
+</div>
+
+<div id="dataModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">News Details</h4>
+            </div>
+            <div class="modal-body" id="employee_detail">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="add-new" data-toggle="modal" data-target="#modalAddNews">
+    <i class="fas fa-plus"></i>
 </div>
 
 <?php include 'inc/footer.php'; ?>

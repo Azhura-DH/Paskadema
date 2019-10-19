@@ -1,0 +1,23 @@
+.add-new {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    color: #fff;
+    background-color: #c50000;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 14.375px;
+    font-size: 30px;
+}
+
+.add-new:hover {
+    background-color: red;
+    box-shadow: 0px 0px 10px #bb1313;
+    animation: rotate 0.5s ease;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}

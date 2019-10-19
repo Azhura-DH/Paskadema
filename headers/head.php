@@ -8,11 +8,11 @@
             <li class="nav-item <?= basename($_SERVER['PHP_SELF']) == "index.php" ? "active" : "" ?>">
                 <a class="nav-link" href="index.php">Home</a>
             </li>
-            <li class="nav-item <?= basename($_SERVER['PHP_SELF']) == "event.php" ? "active" : "" ?>">
-                <a class="nav-link" href="event.php">Event</a>
-            </li>
             <li class="nav-item <?= basename($_SERVER['PHP_SELF']) == "news.php" ? "active" : "" ?>">
                 <a class="nav-link" href="news.php">News</a>
+            </li>
+            <li class="nav-item <?= basename($_SERVER['PHP_SELF']) == "event.php" ? "active" : "" ?>">
+                <a class="nav-link" href="event.php">Event</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="profile.php" data-toggle="dropdown">About</a>

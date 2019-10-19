@@ -52,9 +52,9 @@
                     </li>
 
                     <li>
-                        <a href="angkatan.php">
+                        <a href="anggota.php">
                             <i class="fas">&#xf0c0;</i>
-                            <span>Angkatan</span>
+                            <span>Anggota</span>
                         </a>
                     </li>
 

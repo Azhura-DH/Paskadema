@@ -1,5 +1,5 @@
 <?php
-    $page = "Angkatan";
+    $page = "Anggota";
     include 'inc/config.php';
 
     session_start();
@@ -15,7 +15,7 @@
 ?>
 
 <div class="container">
-    <p>angkatan</p>
+    <p>anggota</p>
 </div>
 
 <?php include 'inc/footer.php'; ?>
