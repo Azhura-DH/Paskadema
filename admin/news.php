@@ -38,14 +38,14 @@
                     }
                 }
 
-                $query = mysqli_query($mysqli,"SELECT * FROM news");
+                $query = mysqli_query($mysqli,"SELECT * FROM news ORDER BY id_news DESC");
                 
                 if(mysqli_num_rows($query) > 0) {
                     while($data = mysqli_fetch_array($query)) {?>
                         <tr>
                             <td><?=$data["id_news"]?></td>
                             <td><?=$data["title_news"]?></td>
-                            <td><?=$data["description"]?></td>
+                            <td><?=substr_replace($data["description"], "...", 70)?></td>
                             <td><?=$data["date_news"]?></td>
                             <td>
                                 <a href='?act=edit&id=<?=$data["id_news"]?>'>
@@ -54,6 +54,7 @@
                                 <a href='?act=hapus&id=<?=$data["id_news"]?>' OnClick="return confirm('Anda yakin menghapus data?')">
                                     <button type='button' class='btn btn-danger'>Hapus</button>
                                 </a>
+                                <input type="button" name="view" value="view" id="<?php echo $data["id_news"]; ?>" class="btn btn-info btn-xs view_data" />
                             </td>
                         </tr>
                     <?php
@@ -110,14 +111,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title">News Detail</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">News Details</h4>
             </div>
-            <div class="modal-body" id="employee_detail">
+            <div class="modal-body" id="news_detail">
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-paski text-light" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -126,5 +127,7 @@
 <div class="add-new" data-toggle="modal" data-target="#modalAddNews">
     <i class="fas fa-plus"></i>
 </div>
+
+<script src="script/modal_view.js"></script>
 
 <?php include 'inc/footer.php'; ?>

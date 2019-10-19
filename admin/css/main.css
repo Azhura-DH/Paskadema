@@ -21,3 +21,13 @@
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
+
+/*------------- Paski Colors -------------*/
+
+.bg-paski {
+    background-color: #bb1313;
+}
+
+.bg-paski:hover {
+    background-color: #ff0000;
+}
