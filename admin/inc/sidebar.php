@@ -13,19 +13,34 @@
     <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content">
             <div class="sidebar-brand" id="close-sidebar">
-                <a><?=$_SESSION["username"]?></a>
+                <a><?=date("d/m/Y")?></a>
                 <div>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
-            <div class="sidebar-header">
+
+            <!-- <div class="sidebar-header">
                 <div class="profile-header">
                     <img class="rounded-circle profile-img" src="../images/logo.jpg" alt="">
                     <p>Paskadema Senanjaya</p>
                 </div>
-                <!-- <div class="siswa-info">
-                    <span class="siswa-name">Paskadema</span>
-                </div> -->
+            </div> -->
+
+            <div class="sidebar-header">
+                <div class="user-pic">
+                    <img class="img-responsive img-rounded" src="../images/logo.jpg"
+                    alt="User picture">
+                </div>
+                <div class="user-info">
+                    <span class="user-name">
+                        <?=$_SESSION["username"]?>
+                    </span>
+                    <span class="user-role">Administrator</span>
+                    <span class="user-status">
+                        <i class="fa fa-circle"></i>
+                        <span>Online</span>
+                    </span>
+                </div>
             </div>
             
             <!-- sidebar-search  -->
@@ -34,33 +49,39 @@
                     <li class="header-menu">
                         <span>Menu</span>
                     </li>
-                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "index.php" ? "sidebar-active" : "" ?>">
-                        <a href="index.php">
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == "index.php" ? "sidebar-active" : "" ?>">
+                        <a class="menu-item-paski" href="index.php">
                             <i class="fas fa-tachometer-alt"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
 
-                    <li class="nav-item dropdown menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "news.php" ? "sidebar-active" : "" ?>">
-                        <a class="nav-link dropdown-toggle" href="news.php" data-toggle="dropdown">
+                    <li class="sidebar-dropdown <?= basename($_SERVER['PHP_SELF']) == "news.php" || basename($_SERVER['PHP_SELF']) == "news_category.php" ? "sidebar-active" : "" ?>">
+                        <a class="menu-item-paski" href="#">
                             <i class="fas">&#xf1ea;</i>
                             <span>News</span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="news.php">News</a>
-                            <a class="dropdown-item" href="news_category.php">Category</a>
+                        <div class="sidebar-submenu">
+                            <ul class="submenu-item-paski">
+                                <li>
+                                    <a href="news.php">News</a>
+                                </li>
+                                <li>
+                                    <a href="news_category.php">News Category</a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
 
-                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "event.php" ? "sidebar-active" : "" ?>">
-                        <a href="event.php">
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == "event.php" ? "sidebar-active" : "" ?>">
+                        <a class="menu-item-paski" href="event.php">
                             <i class="material-icons">event</i>
                             <span>Event</span>
                         </a>
                     </li>
 
-                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "anggota.php" ? "sidebar-active" : "" ?>">
-                        <a href="anggota.php">
+                    <li class="<?= basename($_SERVER['PHP_SELF']) == "anggota.php" ? "sidebar-active" : "" ?>">
+                        <a class="menu-item-paski" href="anggota.php">
                             <i class="fas">&#xf0c0;</i>
                             <span>Anggota</span>
                         </a>
