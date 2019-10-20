@@ -13,15 +13,19 @@
     <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content">
             <div class="sidebar-brand" id="close-sidebar">
-                <a>Tutup</a>
+                <a><?=$_SESSION["username"]?></a>
                 <div>
                     <i class="fas fa-times"></i>
                 </div>
             </div>
             <div class="sidebar-header">
-                <div class="siswa-info">
-                    <span class="siswa-name"><?=$_SESSION["username"]?></span>
+                <div class="profile-header">
+                    <img class="rounded-circle profile-img" src="../images/logo.jpg" alt="">
+                    <p>Paskadema Senanjaya</p>
                 </div>
+                <!-- <div class="siswa-info">
+                    <span class="siswa-name">Paskadema</span>
+                </div> -->
             </div>
             
             <!-- sidebar-search  -->
@@ -37,11 +41,15 @@
                         </a>
                     </li>
 
-                    <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "news.php" ? "sidebar-active" : "" ?>">
-                        <a href="news.php">
+                    <li class="nav-item dropdown menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "news.php" ? "sidebar-active" : "" ?>">
+                        <a class="nav-link dropdown-toggle" href="news.php" data-toggle="dropdown">
                             <i class="fas">&#xf1ea;</i>
                             <span>News</span>
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="news.php">News</a>
+                            <a class="dropdown-item" href="news_category.php">Category</a>
+                        </div>
                     </li>
 
                     <li class="menu-item-paski <?= basename($_SERVER['PHP_SELF']) == "event.php" ? "sidebar-active" : "" ?>">

@@ -2,7 +2,7 @@ $(document).ready(function() {
     $(document).on('click', '.view_data', function() {
         var id_news = $(this).attr("id");
         $.ajax({
-            url: "action/viewNews.php",
+            url: "action/view_news.php",
             method: "POST",
             data: {
                 id_news: id_news

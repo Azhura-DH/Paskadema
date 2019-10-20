@@ -102,7 +102,7 @@
                     <input type="submit" name="add_news" value="Submit" class="btn btn-primary btn-block rounded-pill">
                 </div>
             </form>
-            <?php include 'action/addNews.php' ?>
+            <?php include 'action/add_news.php' ?>
         </div>
     </div>
 </div>

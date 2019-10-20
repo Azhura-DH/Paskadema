@@ -31,3 +31,19 @@
 .bg-paski:hover {
     background-color: #ff0000 !important;
 }
+
+/*------------- Profile Paski -------------*/
+
+.profile-header {
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: cursive;
+    font-weight: bold;
+    color: #fff;
+}
+
+.profile-img {
+    margin-bottom: 10px;
+    width: 115px;
+    height: 115px;
+}
