@@ -48,13 +48,13 @@
                             <td><?=substr_replace($data["description"], "...", 70)?></td>
                             <td><?=$data["date_news"]?></td>
                             <td>
+                                <input type="button" name="view" value="view" id="<?php echo $data["id_news"]; ?>" class="btn btn-info btn-xs view_data" />
                                 <a href='?act=edit&id=<?=$data["id_news"]?>'>
                                     <button type='button' class='btn btn-warning'>Edit</button>
                                 </a>
                                 <a href='?act=hapus&id=<?=$data["id_news"]?>' OnClick="return confirm('Anda yakin menghapus data?')">
                                     <button type='button' class='btn btn-danger'>Hapus</button>
                                 </a>
-                                <input type="button" name="view" value="view" id="<?php echo $data["id_news"]; ?>" class="btn btn-info btn-xs view_data" />
                             </td>
                         </tr>
                     <?php
