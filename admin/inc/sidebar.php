@@ -1,4 +1,4 @@
-<nav class="navbar hide-small fixed-top navbar-expand-sm bg-paski navbar-dark navbar-fixed">
+<nav class="navbar hide-small fixed-top navbar-expand-sm bg-paski-light navbar-dark navbar-fixed">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
         </li>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="user-info">
                     <span class="user-name">
-                        <?=$_SESSION["username"]?>
+                        <strong><?=$_SESSION["username"]?></strong>
                     </span>
                     <span class="user-role">Administrator</span>
                     <span class="user-status">

@@ -45,10 +45,10 @@
                             <td><?=$data["category"]?></td>
                             <td>
                                 <a href='?act=edit&id=<?=$data["id_category"]?>'>
-                                    <button type='button' class='btn btn-warning'>Edit</button>
+                                    <button type='button' class='btn btn-paski-edit bg-transparent'><i class="fa fa-edit"></i></button>
                                 </a>
                                 <a href='?act=hapus&id=<?=$data["id_category"]?>' OnClick="return confirm('Anda yakin menghapus data?')">
-                                    <button type='button' class='btn btn-danger'>Hapus</button>
+                                    <button type='button' class='btn btn-paski-delete bg-transparent'><i class="fa fa-trash"></i></button>
                                 </a>
                             </td>
                         </tr>

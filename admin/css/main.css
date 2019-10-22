@@ -22,13 +22,21 @@
     100% {transform: rotate(360deg);}
 }
 
+.border-paski {
+    border-radius: 25px;
+}
+
 /*------------- Paski Colors -------------*/
 
-.bg-paski {
+.bg-paski-light {
+    background-color: #f00 !important;
+}
+
+.bg-paski-dark {
     background-color: #8b0000 !important;
 }
 
-.bg-paski:hover {
+.bg-paski-dark:hover {
     background-color: #ff0000 !important;
 }
 
@@ -46,4 +54,24 @@
     margin-bottom: 10px;
     width: 115px;
     height: 115px;
+}
+
+/*------------- Paski Button -------------*/
+
+.btn-paski-view,
+.btn-paski-edit,
+.btn-paski-delete {
+    color: #000;
+}
+
+.btn-paski-view:hover {
+    color: #20b2aa;
+}
+
+.btn-paski-edit:hover {
+    color: #ffc400;
+}
+
+.btn-paski-delete:hover {
+    color: #ff0000;
 }

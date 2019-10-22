@@ -48,12 +48,14 @@
                             <td><?=substr_replace($data["description"], "...", 70)?></td>
                             <td><?=$data["date_news"]?></td>
                             <td>
-                                <input type="button" name="view" value="view" id="<?php echo $data["id_news"]; ?>" class="btn btn-info btn-xs view_data" />
+                                <button type="button" name="view" id="<?php echo $data["id_news"]; ?>" class="btn btn-paski-view bg-transparent btn-xs view_data">
+                                    <i class="fa fa-eye"></i>
+                                </button>
                                 <a href='?act=edit&id=<?=$data["id_news"]?>'>
-                                    <button type='button' class='btn btn-warning'>Edit</button>
+                                    <button type='button' class='btn btn-paski-edit bg-transparent'><i class="fa fa-edit"></i></button>
                                 </a>
                                 <a href='?act=hapus&id=<?=$data["id_news"]?>' OnClick="return confirm('Anda yakin menghapus data?')">
-                                    <button type='button' class='btn btn-danger'>Hapus</button>
+                                    <button type='button' class='btn btn-paski-delete bg-transparent'><i class="fa fa-trash"></i></button>
                                 </a>
                             </td>
                         </tr>
@@ -73,7 +75,7 @@
 
 <div class="modal fade" id="modalAddNews" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content border-paski">
             <div class="modal-header text-center">
                 <h4 class="modal-title w-100 font-weight-bold">Tambah Berita Baru</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -109,7 +111,7 @@
 
 <div id="dataModal" class="modal fade">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content border-paski">
             <div class="modal-header">
                 <h4 class="modal-title">News Detail</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -118,7 +120,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn bg-paski text-light" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-paski-dark text-light" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

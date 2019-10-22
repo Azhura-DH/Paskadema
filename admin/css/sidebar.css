@@ -255,7 +255,7 @@ body {
   height: 30px;
   line-height: 30px;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 25px;
 }
 
 .sidebar-wrapper .sidebar-menu ul li a:hover > i::before {
@@ -326,17 +326,21 @@ body {
   right: 17px;
 }
 
-.menu-item-paski:hover {
+/* .menu-item-paski:hover {
   background-color: darkred;
+} */
+
+.sidebar-active a i, .sidebar-active a span {
+  color: #fdcb6e;
 }
 
-.sidebar-active {
-  background-color: darkred;
-}
+/* .sidebar-active li a {
+  color: red;
+} */
 
 .submenu-item-paski {
   list-style: none;
-  background-color: #3f1616;
+  background-color: #312b2b;
 }
 
 /*--------------------------side-footer------------------------------*/
@@ -448,7 +452,7 @@ body {
 /*-----------------------------chiller-theme-------------------------------------------------*/
 
 .chiller-theme .sidebar-wrapper {
-  background: #220c0c;
+  background: #1f1818;
   -webkit-box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.75);
@@ -473,7 +477,7 @@ body {
 .chiller-theme .sidebar-wrapper .sidebar-brand > a,
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
 .chiller-theme .sidebar-footer > a {
-  color: #dbdbdb;
+  color: #818896;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover > a,
@@ -501,15 +505,15 @@ body {
   a:hover:before,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu:focus + span,
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active a i {
-  color: rgba(253, 203, 110,1.0);
-  text-shadow: 0px 0px 10px rgba(253, 203, 110,1.0);
+  color: #fdcb6e;
+  text-shadow: 0px 0px 10px #fdcb6e;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a i,
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
-  background: inherit;
+  background: #312b2b;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
@@ -517,7 +521,7 @@ body {
 }
 
 .chiller-theme .sidebar-footer {
-  background: inherit;
+  background:  inherit;
   border-top: 1px solid #3a3f48;
 }
 
