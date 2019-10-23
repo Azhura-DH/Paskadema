@@ -12,6 +12,8 @@
 
     include 'inc/header.php';
     include 'inc/sidebar.php';
+
+    include 'action/add_news.php';
 ?>
 
 <div class="container">
@@ -21,12 +23,17 @@
                 <th>ID</th>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Category</th>
                 <th>Date</th>
                 <th>Tools</th>
             </tr>
         </thead>
         <tbody>
             <?php
+                function ellipsis($str, $len){
+                    return strlen($str) > $len ? substr($str, 0, $len)."..." : $str;
+                }
+
                 if(isset($_GET['act']) AND $_GET['act']=='hapus') {
                     $hapus = mysqli_query($mysqli,"DELETE FROM news
                                         WHERE id_news = '$_GET[id]'");
@@ -38,14 +45,15 @@
                     }
                 }
 
-                $query = mysqli_query($mysqli,"SELECT * FROM news ORDER BY id_news DESC");
-                
+                $query = mysqli_query($mysqli,"SELECT news.id_news, news.title_news, news.description, news.date_news, news_category.category FROM news INNER JOIN news_category ON news.id_category = news_category.id_category ORDER BY news.id_news DESC");
+
                 if(mysqli_num_rows($query) > 0) {
                     while($data = mysqli_fetch_array($query)) {?>
                         <tr>
                             <td><?=$data["id_news"]?></td>
-                            <td><?=$data["title_news"]?></td>
-                            <td><?=substr_replace($data["description"], "...", 70)?></td>
+                            <td><?=ellipsis($data["title_news"], 15)?></td>
+                            <td><?=ellipsis($data['description'], 70)?></td>
+                            <td><?=$data["category"]?></td>
                             <td><?=$data["date_news"]?></td>
                             <td>
                                 <button type="button" name="view" id="<?php echo $data["id_news"]; ?>" class="btn btn-paski-view bg-transparent btn-xs view_data">
@@ -99,12 +107,23 @@
                         <label data-error="wrong" data-success="right" for="inputDate">Date</label>
                         <input id="inputDate" type="date" id="orangeForm-pass" class="form-control validate" required>
                     </div> -->
+                    <div class="md-form mb-5">
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="category">Category</label>
+                        <?php
+                            $data_category = mysqli_query($mysqli, "SELECT * FROM news_category ORDER BY category ASC");
+                        ?>
+                        <select name="category" class="form-control">
+                            <?php while ($opsi = mysqli_fetch_array($data_category)) { ?>
+                            <option value="<?=$opsi["id_category"]?>"><?=$opsi["category"]?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <input type="submit" name="add_news" value="Submit" class="btn btn-primary btn-block rounded-pill">
                 </div>
             </form>
-            <?php include 'action/add_news.php' ?>
         </div>
     </div>
 </div>

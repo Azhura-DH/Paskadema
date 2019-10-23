@@ -12,6 +12,8 @@
 
     include 'inc/header.php';
     include 'inc/sidebar.php';
+
+    include 'action/add_news_category.php'
 ?>
 
 <div class="container">
@@ -87,7 +89,6 @@
                     <input type="submit" name="add_category" value="Submit" class="btn btn-primary btn-block rounded-pill">
                 </div>
             </form>
-            <?php include 'action/add_news_category.php' ?>
         </div>
     </div>
 </div>
