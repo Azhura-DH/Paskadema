@@ -52,3 +52,10 @@
         font-size: 0.8rem;
     }
 }
+
+/*------------- News Style -------------*/
+
+.date {
+    margin: 10 20 0 0;
+    text-align: right;
+}
