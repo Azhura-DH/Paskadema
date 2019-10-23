@@ -1,12 +1,13 @@
 <?php
     if (isset($_POST['add_member'])) {
         $name_member = $_POST['name_member'];
+        $jabatan = $_POST['jabatan'];
         $angkatan_ke = $_POST['angkatan_ke'];
 
         $check = mysqli_query($mysqli, "SELECT * FROM member WHERE name_member='$name_member'");
         if (mysqli_num_rows($check) == 0) {
-            $tambah = mysqli_query($mysqli,"INSERT INTO member (name_member, angkatan_ke, date_member)
-            VALUES ('$name_member', '$angkatan_ke', NOW())");
+            $tambah = mysqli_query($mysqli,"INSERT INTO member (name_member, jabatan, angkatan_ke, date_member)
+            VALUES ('$name_member', '$jabatan', '$angkatan_ke', NOW())");
 
             if($tambah) {
                 echo "<script>alert('Data berhasil ditambahkan!')</script>";

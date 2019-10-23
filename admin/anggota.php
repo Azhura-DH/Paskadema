@@ -12,6 +12,9 @@
 
     include 'inc/header.php';
     include 'inc/sidebar.php';
+    
+    include 'action/add_member.php';
+    
 ?>
 
 <div class="container">
@@ -20,6 +23,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Jabatan</th>
                 <th>Angkatan</th>
                 <th>Date</th>
             </tr>
@@ -44,6 +48,7 @@
                         <tr>
                             <td><?=$data["id_member"]?></td>
                             <td><?=$data["name_member"]?></td>
+                            <td><?=$data["jabatan"]?></td>
                             <td><?=$data["angkatan_ke"]?></td>
                             <td><?=$data["date_member"]?></td>
                             <td>
@@ -87,6 +92,11 @@
                     </div>
                     <div class="md-form mb-5">
                         <i class="fas fa-envelope prefix grey-text"></i>
+                        <label data-error="wrong" data-success="right" for="jabatan">Jabatan</label>
+                        <input type="text" id="jabatan" class="form-control" rows="4" cols="50" name="jabatan" form="inputMember" placeholder="Role" required/>
+                    </div>
+                    <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
                         <label data-error="wrong" data-success="right" for="inputAngkatanKe">Angkatan-ke</label>
                         <input type="text" id="inputAngkatanKe" class="form-control" rows="4" cols="50" name="angkatan_ke" form="inputMember" placeholder="Enter text here..." required/>
                     </div>
@@ -100,7 +110,6 @@
                     <input type="submit" name="add_member" value="Submit" class="btn btn-primary btn-block rounded-pill">
                 </div>
             </form>
-            <?php include 'action/add_member.php' ?>
         </div>
     </div>
 </div>
